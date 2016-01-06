@@ -12,7 +12,7 @@ function! ResizeFont(adjustment)
   else
     echoerr "ResizeFont can only be used with Gui Vim"
   endif
-  redraw | echo &guifont
+  redraw | echo "ResizeFont: " . &guifont
 endfunction
 
 function! ResizeFontBigger()
