@@ -4,5 +4,5 @@ Gives two functions *:ResizeFontBigger* and *:ResizeFontSmaller*
 
 You can use them like so:
 
-map <F11> :ResizeFontBigger<CR>
-map <F12> :ResizeFontSmaller<CR>
+map <F11> :ResizeFontSmaller<CR>
+map <F12> :ResizeFontBigger<CR>
