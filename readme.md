@@ -6,6 +6,7 @@
 Place this in your .vimrc:
 
 *VimPlug*
+
     // .vimrc
     Plug 'wahidrahim/resize-font'
 
@@ -14,6 +15,7 @@ Place this in your .vimrc:
     :PlugInstall
 
 *Vundle*
+
     // .vimrc
     Plugin 'wahidrahim/resize-font'
 
@@ -22,6 +24,7 @@ Place this in your .vimrc:
     :PluginInstall
 
 *NeoBundle*
+
     // .vimrc
     NeoBundle 'wahidrahim/resize-font'
 
