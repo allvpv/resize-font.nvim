@@ -4,12 +4,13 @@
 **Installation:**
 
 Place this in your .vimrc:
-  // VimPlug
-    Plug 'wahidrahim/resize-font'
-  // Vundle
-    Plugin 'wahidrahim/resize-font'
-  // NeoBundle
-    NeoBundle 'wahidrahim/resize-font'
+
+    // VimPlug
+      Plug 'wahidrahim/resize-font'
+    // Vundle
+      Plugin 'wahidrahim/resize-font'
+    // NeoBundle
+      NeoBundle 'wahidrahim/resize-font'
 
 then run the following in Vim:
 
