@@ -5,17 +5,29 @@
 
 Place this in your .vimrc:
 
-    // VimPlug
-      Plug 'wahidrahim/resize-font'
-    // Vundle
-      Plugin 'wahidrahim/resize-font'
-    // NeoBundle
-      NeoBundle 'wahidrahim/resize-font'
+*VimPlug*
+    // .vimrc
+    Plug 'wahidrahim/resize-font'
 
-then run the following in Vim:
-
+    // run in vim
     :source %
-    :PlugInstall 
+    :PlugInstall
+
+*Vundle*
+    // .vimrc
+    Plugin 'wahidrahim/resize-font'
+
+    // run in vim
+    :source %
+    :PluginInstall
+
+*NeoBundle*
+    // .vimrc
+    NeoBundle 'wahidrahim/resize-font'
+
+    // run in vim
+    :source %
+    :NeoBundleInstall
 
 If you're using Pathogen, run the following:
 
