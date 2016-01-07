@@ -1,6 +1,8 @@
 # resize-font.vim #
 #### *quickly resize font in gui vim* ####
 
+![alt tag](https://fat.gfycat.com/PolishedWelllitCony.gif)
+
 **Installation:**
 
 Place this in your .vimrc:
