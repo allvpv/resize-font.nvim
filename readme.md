@@ -1,4 +1,4 @@
-# resize-font.vim #
+# resize-font #
 #### *quickly resize font in gui vim* ####
 
 ![alt tag](https://fat.gfycat.com/PolishedWelllitCony.gif)
