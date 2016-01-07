@@ -1,7 +1,8 @@
 # resize-font #
 #### *quickly resize font in gui vim* ####
 
-![alt tag](https://fat.gfycat.com/PolishedWelllitCony.gif)
+<!--![alt tag](https://fat.gfycat.com/PolishedWelllitCony.gif)-->
+![alt tag](https://thumbs.gfycat.com/PolishedWelllitCony-mobile.mp4)
 
 **Installation:**
 
