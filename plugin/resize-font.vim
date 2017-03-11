@@ -1,4 +1,4 @@
-let s:pattern='^\(.* \)\([1-9][0-9]*\)$'
+let s:pattern='^\(.* \)\([1-9][0-9]*\(\.[0-9]*\)\?\)$'
 
 function! ResizeFont(adjustment)
   if has("gui_running")
