@@ -8,6 +8,9 @@ function! ResizeFont(adj)
   elseif &guifont =~ s:pattern_float
     let fontname = substitute(&guifont, s:pattern_float, '\1', '')
     let oldsize = str2float(substitute(&guifont, s:pattern_float, '\2.\3', ''))
+  else
+    echoerr "&guifont incorrect"
+    return -1
   endif
 
   let newsize = string(oldsize + a:adj)
