@@ -1,8 +1,0 @@
-*resize-font.vim* very simply resizing font in gui vim
-
-Gives two functions *:ResizeFontBigger* and *:ResizeFontSmaller*
-
-You can use them like so:
-
-map <F11> :ResizeFontSmaller<CR>
-map <F12> :ResizeFontBigger<CR>
