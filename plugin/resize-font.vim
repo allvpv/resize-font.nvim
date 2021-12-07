@@ -1,14 +1,12 @@
 let s:pattern='^\([^:]*\):h\([0-9]\+\).\([0-9]\+\)$'
 
-function! ResizeFont(adjustment)
-    let oldfontsize = str2float(substitute(&guifont, s:pattern, '\2.\3', ''))
+function! ResizeFont(adj)
+  let fontname = substitute(&guifont, s:pattern, '\1', '')
+  let oldsize = str2float(substitute(&guifont, s:pattern, '\2.\3', ''))
+  let newsize = string(oldsize + a:adj)
+  let &guifont = fontname . ":h" . newsize
 
-    let fontname = substitute(&guifont, s:pattern, '\1', '')
-    let fontsize = string(oldfontsize + adjustment)
-    let newfont = fontname . ":h" . fontsize 
-    let &guifont = newfont
-    
-    redraw | echo newfont
+  redraw | echo &guifont
 endfunction
 
 function! ResizeFontBigger()
