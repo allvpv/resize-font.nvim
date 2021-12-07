@@ -1,26 +1,22 @@
-let s:pattern='^\(.* \)\([1-9][0-9]*\(\.[0-9]*\)\?\)$'
+let s:pattern='^\([^:]*\):h\([0-9]\+\).\([0-9]\+\)$'
 
 function! ResizeFont(adjustment)
-  if has("gui_running")
+    let oldfontsize = str2float(substitute(&guifont, s:pattern, '\2.\3', ''))
+
     let fontname = substitute(&guifont, s:pattern, '\1', '')
-    let fontsize = substitute(&guifont, s:pattern, '\2', '')
-    if (fontsize > 1) || (a:adjustment > 0)
-      let newsize = fontsize + a:adjustment
-      let newfont = fontname . newsize
-      let &guifont = newfont
-    endif
-  else
-    echoerr "ResizeFont can only be used with Gui Vim"
-  endif
-  redraw | echo "ResizeFont: " . &guifont
+    let fontsize = string(oldfontsize + adjustment)
+    let newfont = fontname . ":h" . fontsize 
+    let &guifont = newfont
+    
+    redraw | echo newfont
 endfunction
 
 function! ResizeFontBigger()
-  call ResizeFont(1)
+  call ResizeFont(0.5)
 endfunction
 
 function! ResizeFontSmaller()
-  call ResizeFont(-1)
+  call ResizeFont(-0.5)
 endfunction
 
 command! ResizeFontBigger call ResizeFontBigger()
