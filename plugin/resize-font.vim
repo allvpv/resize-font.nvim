@@ -1,21 +1,22 @@
-let s:pattern='^\([^:]*\):h\([0-9]\+\(.[0-9]\+\)\?\)$'
+let s:pattern='^\([^:]*:[hw]\)\([0-9]\+\(.[0-9]\+\)\?\)$'
 
 if !exists('g:resizefont_step')
   let g:resizefont_step=0.3
 endif
 
 function! ResizeFont(adj)
-  if &guifont =~ s:pattern
-    let fontname = substitute(&guifont, s:pattern, '\1', '')
-    let oldsize = str2float(substitute(&guifont, s:pattern, '\2', ''))
-  else
-    echoerr "&guifont incorrect"
+  if !exists('&guifont')
+    echoerr "&guifont option does not exist"
+    return -1
+  elseif !(&guifont =~ s:pattern)
+    echoerr "cannot parse &guifont (it does not match regular expression)"
     return -1
   endif
 
-  let newsize = string(oldsize + a:adj)
-  let &guifont = fontname . ":h" . newsize
+  let fontname = substitute(&guifont, s:pattern, '\1', '')
+  let oldsize = str2float(substitute(&guifont, s:pattern, '\2', ''))
 
+  let &guifont = fontname . string(oldsize + a:adj)
   redraw | echo &guifont
 endfunction
 
