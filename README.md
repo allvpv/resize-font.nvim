@@ -1,15 +1,15 @@
 # resize-font #
-Resize font in Neovim GUI. This plugin does not change your key-mappings. Put
+Resize font in Neovim GUI.
 
-```vim
-" +/- fontsize
-map <D-=> :ResizeFontBigger<cr>
-map <D--> :ResizeFontSmaller<cr>
+### packer.nvim
+
+```lua
+  use { 'allvpv/resize-font.nvim', config = function()
+      vim.keymap.set('', '<D-=>', ':ResizeFontBigger<CR>')
+      vim.keymap.set('', '<D-->', ':ResizeFontSmaller<CR>')
+      -- Adjust step of resizing (optional)
+      -- vim.g.resizefont_step = <floating-number>
+  end }
+  --
 ```
 
-or something along those lines in your `init.vim`. Moreover, you can adjust the
-step of resizing.
-
-```vim
-let g:resizefont_step=<your-value>
-```
