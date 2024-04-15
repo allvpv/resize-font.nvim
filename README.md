@@ -1,6 +1,9 @@
 # resize-font #
 Resize font in Neovim GUI.
 
+⚠️ I am no longer maintaining this. Check out [Neovide](https://neovide.dev) with it's
+`vim.g.neovide_scale_factor` option.
+
 #### packer.nvim
 
 ```lua
